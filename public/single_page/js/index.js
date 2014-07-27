@@ -1,3 +1,8 @@
+/*
+ * SinglePage v1.0
+ * MIT License
+ */
+
 $(function(){
   //* init *//
   var $wrapper  = $("#wrapper"),
@@ -5,7 +10,7 @@ $(function(){
       $header   = $("header"),
       $body     = $("body"),
       $ms       = $("#measure"),
-      $wpSec    = $(".wpSec"),
+      $wpSec    = $("div.wpSec"),
       $children = $wpSec.children(),
       $wd       = $(window);
       
@@ -20,10 +25,6 @@ $(function(){
   
   
   //* functions *//
-  function measure() {              // scrollTop および ウィンドウの高さを取得
-    $ms.html( "ScrollTop: " + $body.scrollTop() + "<br />WindowHeight: " + $wd.height() );
-  }
-  
   function getMargin() {            // ウィンドウの高さだけ 2つめのセクションにマージンを設ける
     $("#sec2nd").css("margin-top", $wd.height());
   }
@@ -48,7 +49,7 @@ $(function(){
   }
   
   function scrollWithFade() {      // 現在位置から判別して要素をフェード
-    $children.each(function(){
+    $children.each( function(){
       childPos   = $(this).offset().top;
       userPos    = $wd.scrollTop() + $wd.height();
       diff       = userPos - childPos;              // 現在位置と要素の位置を比較した差分
@@ -67,19 +68,39 @@ $(function(){
   }
   
   function pageTop() {
-    $("html,body").animate({ scrollTop: 0 }, 800, "easeOutExpo");
+    $("html,body").animate({ scrollTop: 0 }, 400);
+  }
+  
+  function resize_for_android() {    // viewport 指定が効かない Android端末用
+    if (navigator.userAgent.indexOf('Android') > 0){
+      $("html").css("zoom" , $(window).width()/320 )
+    }
   }
   
   
   //* exec *//
-  measure();
   popHeader();
   getMargin();
+  resize_for_android();
   loadingAnimation();
   
-  $wd.on("resize scroll", popHeader).on("scroll", scrollWithFade).on("resize", getMargin);
   $("#pageTop").click(pageTop);
   
+  $wd.on("scroll", function(){
+    
+    popHeader();
+    scrollWithFade();
+  
+  }).on("resize", getMargin);
+  
+  
   //* debug *//
-  // $wd.on("resize scroll", measure);
+  /*
+  var $ms       = $("#measure");
+  function measure() {              // scrollTop および ウィンドウの高さを取得
+    $ms.html( "ScrollTop: " + $body.scrollTop() + "<br />WindowWidth: " + $wd.width() + "<br />WindowHeight: " + $wd.height() );
+  }
+  measure();
+  $wd.on("scroll resize", measure);
+  */
 });
