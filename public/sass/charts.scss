@@ -1,0 +1,44 @@
+section#chart {
+  padding-bottom: 120px;
+  
+  h1 {
+    padding-top: 60px;
+    text-align: center;
+  }
+  
+  nav {
+    width: 418px;
+    margin: 15px auto 0 auto;
+    font-size: 1.2rem;
+    line-height: 2.0rem;
+    li {
+      list-style-type: upper-roman;
+      a {
+        color: #14708b;
+      }
+    }
+  }
+  
+  #wpCanvas {
+    padding-top: 60px;
+    font-size: 0;
+  
+    section {
+      text-align: center;
+      margin-bottom: 30px;
+      
+      h1 {
+        padding-bottom: 25px;
+        color: #44a9ce;
+        font-size: 3.0rem;
+        font-family: 'Raleway';
+        font-weight: 600;
+      }
+      
+      canvas {
+        padding: 0 20px 0 0;
+        display: inline-block;
+      }
+    }
+  }
+}

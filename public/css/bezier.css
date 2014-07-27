@@ -1,0 +1,20 @@
+/* line 1, ../sass/bezier.scss */
+.hide {
+  display: none;
+}
+
+/* line 5, ../sass/bezier.scss */
+#wrapper {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+/* line 10, ../sass/bezier.scss */
+#wpCanvas {
+  width: 100%;
+  margin-bottom: 15px;
+}
+/* line 14, ../sass/bezier.scss */
+#wpCanvas #canvas {
+  background: #fff;
+}

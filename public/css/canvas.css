@@ -1,0 +1,9 @@
+/* line 1, ../sass/canvas.scss */
+#canvas {
+  background: #fff;
+}
+
+/* line 4, ../sass/canvas.scss */
+.hide {
+  display: none;
+}

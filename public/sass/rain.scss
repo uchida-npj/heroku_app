@@ -1,0 +1,39 @@
+#canvas {
+  position: absolute;
+  left: 50%;
+  top: -260px;
+  -webkit-transform: translateX(-50%);
+  
+  -webkit-animation-name            : rain;
+  -webkit-animation-duration        : 2s;
+  -webkit-animation-timing-function : ease-in;
+  -webkit-animation-delay           : 0.5s;
+  -webkit-animation-iteration-count : infinite;
+  -webkit-animation-direction       : normal;
+  // -webkit-animation-fill-mode       : forwards;
+  
+  -ms-animation-name            : rain;
+  -ms-animation-duration        : 2s;
+  -ms-animation-timing-function : ease-in-out;
+  -ms-animation-delay           : 0.5s;
+  -ms-animation-iteration-count : infinite;
+  -ms-animation-direction       : normal;
+  // -ms-animation-fill-mode       : forwards;
+  
+  animation-name            : rain;
+  animation-duration        : 2s;
+  animation-timing-function : ease-in-out;
+  animation-delay           : 0.5s;
+  animation-iteration-count : infinite;
+  animation-direction       : normal;
+  // animation-fill-mode       : forwards;
+}
+.hide {
+  display: none;
+}
+
+@-webkit-keyframes rain {
+  0%   { top: -60px; }
+  50%  { top: -60px; }
+  100% { top: 100%; }
+}

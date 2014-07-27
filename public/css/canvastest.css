@@ -1,0 +1,47 @@
+/* line 1, ../sass/canvastest.scss */
+#canvas {
+  position: absolute;
+  left: 50%;
+  top: -60px;
+  -webkit-transform: translateX(-50%);
+  -webkit-animation-name: rain;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  -ms-animation-name: rain;
+  -ms-animation-duration: 3s;
+  -ms-animation-timing-function: ease-in-out;
+  -ms-animation-delay: 0.5s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-direction: normal;
+  animation-name: rain;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+/* line 31, ../sass/canvastest.scss */
+.hide {
+  display: none;
+}
+
+@-webkit-keyframes rain {
+  /* line 36, ../sass/canvastest.scss */
+  0% {
+    top: -60px;
+  }
+
+  /* line 37, ../sass/canvastest.scss */
+  50% {
+    top: -60px;
+  }
+
+  /* line 38, ../sass/canvastest.scss */
+  100% {
+    top: 100%;
+  }
+}

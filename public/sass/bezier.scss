@@ -1,0 +1,17 @@
+.hide {
+  display: none;
+}
+
+#wrapper {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+#wpCanvas {
+  width: 100%;
+  margin-bottom: 15px;
+  
+  #canvas {
+    background: #fff;
+  }
+}

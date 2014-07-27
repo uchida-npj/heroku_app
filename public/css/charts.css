@@ -1,0 +1,47 @@
+/* line 1, ../sass/charts.scss */
+section#chart {
+  padding-bottom: 120px;
+}
+/* line 4, ../sass/charts.scss */
+section#chart h1 {
+  padding-top: 60px;
+  text-align: center;
+}
+/* line 9, ../sass/charts.scss */
+section#chart nav {
+  width: 418px;
+  margin: 15px auto 0 auto;
+  font-size: 1.2rem;
+  line-height: 2.0rem;
+}
+/* line 14, ../sass/charts.scss */
+section#chart nav li {
+  list-style-type: upper-roman;
+}
+/* line 16, ../sass/charts.scss */
+section#chart nav li a {
+  color: #14708b;
+}
+/* line 22, ../sass/charts.scss */
+section#chart #wpCanvas {
+  padding-top: 60px;
+  font-size: 0;
+}
+/* line 26, ../sass/charts.scss */
+section#chart #wpCanvas section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+/* line 30, ../sass/charts.scss */
+section#chart #wpCanvas section h1 {
+  padding-bottom: 25px;
+  color: #44a9ce;
+  font-size: 3.0rem;
+  font-family: 'Raleway';
+  font-weight: 600;
+}
+/* line 38, ../sass/charts.scss */
+section#chart #wpCanvas section canvas {
+  padding: 0 20px 0 0;
+  display: inline-block;
+}
