@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flexbox</title>
+</head>
+<body>
+  <style>
+    html, body {
+      padding: 0;
+      margin: 0;
+    }
+    
+    
+    #wrapper ol {
+      width: 100%;
+      padding: 0;
+      margin: 0 0 50px 0;
+      display: flex;
+    }
+    #wrapper ol.flex {
+      background: #f51f1f;
+      flex-flow: row wrap;
+      justify-content: center /* flex-start | flex-end | center | space-between | space-around */;
+    }
+    
+    
+    #wrapper ol li {
+      position: relative;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      list-style-type: none;
+    }
+    #wrapper ol li:nth-child(odd) {
+      background: #2da4dc;
+    }
+    #wrapper ol li:nth-child(even) {
+      background: #f3c91f;
+    }
+    
+    
+    #wrapper ol.flex-trans li {
+      flex: 1;
+      -webkit-transition: flex 0.3s ease-in-out, color 0.5s ease-in-out;
+      -ms-transition: flex 0.3s ease-in-out, color 0.5s ease-in-out;
+      transition: flex 0.3s ease-in-out , color 0.5s ease-in-out;
+      height: 450px;
+      color: transparent;
+      cursor: pointer;
+    }
+    #wrapper ol.flex-trans li:hover {
+      flex: 3;
+      color: #fff;
+    }
+    #wrapper ol.flex li {
+      width: 200px;
+      height: 250px;
+      color: #fff;
+    }
+    
+    
+    #wrapper ol.flex li.piyo1 {
+    }
+    
+    
+    #wrapper ol li span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    
+    
+    #links {
+      padding: 20px 0 40px 40px;
+    }
+  </style>
+  
+  <div id="wrapper">
+    <ol class="flex-trans">
+      <li class="hoge1"><span>hoge1</span></li>
+      <li class="hoge2"><span>hoge2</span></li>
+      <li class="hoge3"><span>hoge3</span></li>
+      <li class="hoge4"><span>hoge4</span></li>
+      <li class="hoge5"><span>hoge5</span></li>
+    </ol>
+    
+    <ol class="flex">
+      <li class="piyo1"><span>piyo1</span></li>
+      <li class="piyo2"><span>piyo2</span></li>
+      <li class="piyo3"><span>piyo3</span></li>
+      <li class="piyo4"><span>piyo4</span></li>
+      <li class="piyo5"><span>piyo5</span></li>
+    </ol>
+    
+    <div id="links">
+      <p><a href="http://codepen.io/dp_lewis/details/sDwlz">CODEPEN</a></p>
+      <p><a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS-TRICK</a></p>
+    </div>
+  </div>
+</body>
+</html>
